@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>侧边网页导航</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body, html {
+			font: 62.5%/1.5 arial,sans-serif;
+			font-style: normal;
+			font-weight: normal;
+		}
+		h1 {
+			margin: 0;
+			padding: 0;
+			font-size: 2em;
+			font-size: 2rem;
+			margin-bottom: -12px;
+			font-weight: normal;
+			font-style: normal;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+		/* 左侧导航 side */
+		#side {
+			position: fixed;
+			left: 50%;
+			margin-left: 400px;
+			top: 100px;
+		}
+		#side a{
+			display: block;
+			width: 80px;
+			text-align: center;
+			height: 40px;
+			line-height: 40px;
+			font-size: 1.4em;
+			font-size: 1.4rem;
+			color: #fff;
+			text-decoration: none;
+			border: none;
+			border-bottom: 1px solid #9a9a9a;
+		}
+		#side li:last-child a{
+			border-bottom: none;
+		}
+		#side a:link,
+		#side a:visited {
+			background-color: #888;
+		}
+		#side a:hover,
+		#side a.active {
+			background-color: #444;
+		}
+		/* 内容区 */
+		#wrapper {
+			width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.item {
+			border: 1px solid #d0d0d0;
+			margin-bottom: 10px;
+			margin-top: 10px;
+			overflow: hidden;
+		}
+		.item h2 {
+			padding: 0;
+			margin: 0;
+			margin-left: 10px;
+			margin-top: 10px;
+			font-size: 1.8em;
+			font-size: 1.8rem;
+		}
+		.item ul {
+			display: inline-block;
+		}
+		.item ul li {
+			float: left;
+			margin-left: 10px;
+			margin-bottom: 10px;
+			margin-top: 10px;
+		}
+		.item ul li img {
+			width: 250px;
+			border: none;
+		}
+		.item ul li a {
+			text-decoration: none;
+		}
+		/* ie6 hack */
+		* html #side {
+			position: absolute;
+			top: expression(((e=document.documentElement.srcollTop)?e:document.body.scrollTop) + 100 + "px");
+		}
+		* html , * html body {
+			background-image: url(about:blank);
+			background-attachment: fixed;
+		}
+	</style>
+	<script type="text/javascript" src="js/client.js"></script>
+	<script type="text/javascript" src="js/event.js"></script>
+	<script type="text/javascript" src="js/side.js"></script>
+</head>
+<body>
+	<div id="side">
+		<ul>
+			<li><a href="#item1" class="active">1F 男装</a></li>
+			<li><a href="#item2">2F 女装</a></li>
+			<li><a href="#item3">3F 美妆</a></li>
+			<li><a href="#item4">4F 数码</a></li>
+			<li><a href="#item5">5F 母婴</a></li>
+		</ul>
+	</div>
+	<div id="wrapper">
+		<h1>梅州购物网</h1>
+		<div id="item1" class="item">
+			<h2>男装</h2>
+			<ul>
+				<li><a href="#"><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/1F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item2" class="item">
+			<h2>女装</h2>
+			<ul>
+				<li><a href="#"><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/2F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item3" class="item">
+			<h2>美妆</h2>
+			<ul>
+				<li><a href="#"><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/3F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item4" class="item">
+			<h2>数码</h2>
+			<ul>
+				<li><a href="#"><img src="images/4F.png" alt=""></a></li>
+				<li><a href="#"><img src="images/4F.png" alt=""></a></li>
+				<li><a href="#"><img src="images/4F.png" alt=""></a></li>
+				<li><a href="#"><img src="images/4F.png" alt=""></a></li>
+				<li><a href="#"><img src="images/4F.png" alt=""></a></li>
+				<li><a href="#"><img src="images/4F.png" alt=""></a></li>
+				<li><a href="#"><img src="images/4F.png" alt=""></a></li>
+				<li><a href="#"><img src="images/4F.png" alt=""></a></li>
+				<li><a href="#"><img src="images/4F.png" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item5" class="item">
+			<h2>母婴</h2>
+			<ul>
+				<li><a href="#"><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/5F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
